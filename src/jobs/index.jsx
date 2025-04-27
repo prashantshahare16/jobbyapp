@@ -1,27 +1,39 @@
-import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import Header from '../header';
+import DisaplayAllJobs from '../DisplayAllJobs';
+import FilterSection from '../filterSection';
 import './index.css'
 
 const Jobs = ()=>{
 
-  const token = Cookies.get("jwtToken");
-  const navigate = useNavigate ();
-
-useEffect(()=>{
-
-if(token === undefined){
-
-  navigate("/login")
-
-}
 
 
+  return(
+    <div>
+      <Header/> 
+            <div className='all-jobs-filter-cont'>
+                
+                  <div className='filter-cont'>
+                    <FilterSection/>
+                  </div>
 
-},[]);
+
+                  <div className='all-jobs-cont'>
+                    <DisaplayAllJobs/>
+                  </div>
 
 
-  return<h1>Jobs Component</h1>
+
+
+
+            </div>
+
+
+
+
+
+    </div>
+   
+  )
 
 }
 export default Jobs;

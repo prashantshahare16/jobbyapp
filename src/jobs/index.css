@@ -1,6 +1,6 @@
 .all-jobs-filter-cont{
    width: 100%;
-   height:90vh;
+   padding: 20px;
    background-color: black;
    display: flex;
    flex-direction:row;
@@ -8,10 +8,16 @@
 .filter-cont{
    width: 30%;
    height:100%;
-   background-color: cadetblue;
+   color: white;
+  
+   
 }
 .all-jobs-cont{
    width: 70%;
    height:100%;
-   background-color: rgb(199, 199, 219);
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+    /* background-image:url(https://cdn-icons-png.flaticon.com/512/5680/5680244.png) ; */  
 }
+

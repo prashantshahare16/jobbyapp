@@ -1,0 +1,30 @@
+.display-jobs-card{
+   width:100%;
+   padding: 20px;
+   border-radius: 15px;
+   background-color: rgb(86, 73, 73);
+   list-style: none;
+   margin-bottom: 10px;
+   color: whitesmoke;
+   
+
+}
+.logo-rating-cont{
+display: flex;
+}
+.title-rating-cont{
+   margin-left: 15px;
+   
+   
+}
+.location-emptype-ppa-cont{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+
+}
+.line{
+   /* background-color: aqua; */
+   border-color:whitesmoke
+}

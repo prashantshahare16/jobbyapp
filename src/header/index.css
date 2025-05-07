@@ -5,7 +5,11 @@
    height: 10vh;
    padding: 10px;
    background-color: rgb(48, 46, 46);
+
 }
+
+   
+
 .web-logo{
    width: 120px;
 }
@@ -15,8 +19,59 @@
    align-items: center;
    list-style: none;
 }
-.my-nav-items{
+
+
+   
+   
+ 
+
+.my-nav-items1{
    color: white;
    margin-right: 15px;
    font-size: 20px;
+   display: flex;
+   align-items: center;
 }
+.my-nav-items1 i,
+.my-nav-items2 i{
+   margin-right: 5px;
+   display: none;
+}
+
+
+.my-nav-items2{
+   color: white;
+   margin-right: 15px;
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+}
+.btn.btn-primary{
+   background-color: rgb(197, 26, 26);
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+}
+.btn.btn-primary i {
+   margin-right: 5px;
+   display: none; /* Hide logout icon by default */
+ }
+
+@media (max-width: 430px) {
+  .menu-text{
+      display: none;
+  }
+  .my-nav-items1 i,
+   .my-nav-items2 i,
+   .btn.btn-primary i {
+      display: inline-block;
+   }
+  .nav-ul-cont{
+   justify-content: center;
+  }
+}
+

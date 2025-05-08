@@ -130,10 +130,14 @@ const employeeType= [
                                 onChange={(e)=>ChangeSalaryRangeType(e.target.value,e.target.checked)}
                                  id={each.salaryRangeTypeId}
                                   type="checkbox" 
+                               
+                                  
                                   value={each.salaryRangeTypeId}
                                   
                                   />
+                                 
                                 <label htmlFor={each.salaryRangeTypeId}className="filter-label">{each.label}</label>
+                               
                           </li>
 
                       ))  }

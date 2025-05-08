@@ -1,12 +1,14 @@
 import './index.css';
 import { FaBriefcase,FaStar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
  
 const DisplayAllJobs=(props)=>{
 
 const {jobsItem}=props;
 const {id,title,rating,company_logo_url,location,job_description,employment_type,package_per_annum}=jobsItem;
    return(
+      <Link to ={`/jobs/${id}`}>
       <li  className="display-jobs-card">
 
             <div className="logo-rating-cont">
@@ -41,7 +43,7 @@ const {id,title,rating,company_logo_url,location,job_description,employment_type
             <p>{job_description}</p>
 
       </li>
-      
+      </Link>
    )  
 
 }

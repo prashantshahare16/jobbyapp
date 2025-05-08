@@ -24,7 +24,6 @@ const Jobs = ()=>{
 
     const onFetchUserData =async()=>{
       const{emptypeList,minPakage,userinput} =allValues;
-
       const api =`https://apis.ccbp.in/jobs?employment_type=${emptypeList}&minimum_package=${minPakage}&search=${userinput}`;
       
 
@@ -62,10 +61,10 @@ const Jobs = ()=>{
   }
 
 
-  const onChangeEmpType = (value,isChecked)=>{
+  const onChangeEmpType = (value,checked)=>{
     // console.log("Child calling function aginast one way data binding solved");
-    
-    if(isChecked === true){
+    // console.log(checked);
+    if(checked === true){
 
         setValues({...allValues, emptypeList : [...allValues.emptypeList,value]});
 
@@ -77,9 +76,10 @@ const Jobs = ()=>{
     }
 
   }
-  const ChangeSalaryRangeType = (value,isChecked)=>{
+  const ChangeSalaryRangeType = (value,checked)=>{
+    // console.log(checked)
 
-    if(isChecked === true){
+    if(checked === true){
 
         setValues({...allValues, SalaryRangeTypeList : [...allValues.SalaryRangeTypeList,value]});
 

@@ -26,7 +26,7 @@ const JobsDetailedView = () => {
       }
       fetchJobsDetailed();
    },[])
-   fetchJobsDetailed();
+  
 
    
    return <h1>Jobs Detailed view</h1>

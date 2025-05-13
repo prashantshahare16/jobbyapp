@@ -56,7 +56,8 @@ const employeeType= [
 
      const {ChangeSalaryRangeType} = prop;
      
-     
+      const{SeletedSalaryRange}= prop;
+
      const token = Cookies.get("jwtToken");
      
      
@@ -83,8 +84,6 @@ const employeeType= [
       
      return(
           <div className="Filter-group-container">
-          
-        
             <div className="ProfileDetails">
               <img src={allValues.profileDetails.profile_image_url} 
               alt="profile"
@@ -93,12 +92,10 @@ const employeeType= [
               <h1 className="profile-name text-">{allValues.profileDetails.name}</h1>
               <p className="profile-bio text-secondary">{allValues.profileDetails.short_bio}</p>
              </div>
-          
-           
+    
            <div className="EmployeeType">
                 <hr className="line"/> 
-                <h4 className="Filter-heading">EmployeeType</h4>
-                
+                <p className="Filter-heading">EmployeeType</p>
                <ul>
                {employeeType.map(each=>(
                     <li key={each.employeeTypeId}>
@@ -114,33 +111,32 @@ const employeeType= [
                     </li>
                ))}
                </ul>
-           
- 
             </div>
 
             <div className="SalaryRangeType">
-                  <hr className="line"/> 
-                  <h4 className="Filter-label">SalaryRangeType</h4>
+              <hr className="line"/> 
+                  <p className="Filter-heading">SalaryRangeType</p>
                   <ul>
                    {salaryRangeType.map(each=>(
                           <li key={each.salaryRangeTypeId}>
-
-                                <input 
-                              
-                                onChange={(e)=>ChangeSalaryRangeType(e.target.value,e.target.checked)}
+                                <input                              
                                  id={each.salaryRangeTypeId}
-                                  type="checkbox" 
-                               
-                                  
+                                  type="radio"
                                   value={each.salaryRangeTypeId}
-                                  
-                                  />
+                                  checked={SeletedSalaryRange === each.salaryRangeTypeId}
+                                 onChange={(e) => {
+                                      const selectedValue = e.target.value;
+                                      const isAlreadySelected = SeletedSalaryRange === selectedValue;
+                                      ChangeSalaryRangeType(selectedValue, !isAlreadySelected); // Toggle logic
+                                    }}
+                                        />
                                  
                                 <label htmlFor={each.salaryRangeTypeId}className="filter-label">{each.label}</label>
                                
                           </li>
-
+                          
                       ))  }
+                   
 
                   </ul>
             </div>

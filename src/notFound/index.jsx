@@ -1,8 +1,12 @@
-import './index.css'
+import './index.css'; 
 
-
-const NotFound=()=><h1>We Are Sorry,the page you requested could not be found</h1>
-
-
+const NotFound = () => {
+  return (
+    <div className="oops-404-error">
+      <img src="/not found.jpg" alt="Not Found" />
+      
+    </div>
+  );
+};
 
 export default NotFound;

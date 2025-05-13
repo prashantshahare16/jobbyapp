@@ -27,13 +27,42 @@ const Header = ()=>{
                         <span className="menu-text">Jobs</span>
                         </Link>
                     </li>
-                </ul>
+               
 
-                <button className='btn btn-primary'>
-                <i className="fas fa-sign-out-alt"></i> {/* Logout Icon */}
+           </ul>
+           
+           <ul >
+            <li className='my-nav-items3'>
+            <button
+            
+             className="btn btn-primary"
+              
+              onClick={() => {
+                // Delete all cookies
+                document.cookie.split(";").forEach((c) => {
+                  document.cookie = c
+                    .replace(/^ +/, "")
+                    .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+                });
+                  
+                  
+                // Redirect to login page
+                window.location.href = '/login';
+              }}
 
-                <span className="menu-text">Logout</span>
-                    </button>
+            //   onClick={handleLogout}
+            >
+              <i className="fa-solid fa-right-from-bracket"></i>
+            <span className="menu-text">Logout</span>
+            
+            </button>
+            
+        </li>
+           </ul>
+              
+   
+    
+  
 
         </nav>
 

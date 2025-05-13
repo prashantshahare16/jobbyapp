@@ -22,3 +22,22 @@
    align-items: center;
    padding: 15px;
 }
+.form-group{
+   position: relative;
+   /* width: 300px; */
+}
+
+.toggle-password {
+  position: absolute ;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-40%);
+  cursor: pointer;
+  font-size: 25px;
+  color: #050906bc;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover {
+  color: #f80808; /* changes color on hover */
+}

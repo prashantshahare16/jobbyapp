@@ -5,8 +5,37 @@
   padding-top: 20px;
   padding-bottom: 40px;
   padding-left: 20px;
+  
+   
+  
  
 }
+@media only screen and (max-width:450px){
+  .Filter-group-container {
+    flex-direction:none;
+   font-size:10px ;
+    width: 100%;
+    display: inline-block;
+    
+   
+   
+    
+  
+  }}
+  @media only screen and (max-width:450px){
+  .filter-heading,.Filter-label{
+    font-family: 10px;
+
+  }
+  }
+ @media only screen and (max-width:450px){
+.ProfileDetails{
+  font-size:x-small;
+}
+ }
+    
+
+
 
 .filter-heading{
   font-size: 25px;
@@ -21,6 +50,12 @@
   /* bottom: 10px; */
   /* height: 45px; */
 }
+input[type="radio"] {
+  accent-color: #0d6efd; /* or any color you want */
+}
+
+
+
 
   
   .ProfileDetails {
@@ -29,6 +64,8 @@
     padding: 20px;
     border-radius: 30px 30px 15px 15px;
     height: 180px;
+    font-size:  15px;
+    display: inline-block;
   
   }
   .ProfileDetails {
@@ -49,6 +86,6 @@
 .profile-bio {
   font-family: 'Roboto';
   color: #2c3643;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.5;
 }

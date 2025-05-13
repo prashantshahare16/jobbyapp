@@ -1,8 +1,8 @@
 import  {  useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-
 import './index.css';
+
 
 
 const Login = ()=>{
@@ -11,11 +11,14 @@ const Login = ()=>{
    const[allValues,setValues]=useState({
       username:"",
       password:"",
+  
       errorMsg:"",
    })
 
+   
+  const [showPassword, setShowPassword] = useState(false); // 
    let navigate =useNavigate();
-   let token =Cookies.get("jwtToken");
+   let token = Cookies.get("jwtToken");
 
 
    const onSubmitUserDetails =async(e)=>{
@@ -26,8 +29,12 @@ const Login = ()=>{
 
          const userDetails ={
             username:allValues.username,
-            password:allValues.password
+            password:allValues.password,
+            
+            
+
          }
+         
          const options =  {
             method:"Post",
             body:JSON.stringify(userDetails)
@@ -57,6 +64,8 @@ const Login = ()=>{
 
    }  
 
+
+
    
    const onChangeUserName =(e)=>{
       setValues({...allValues,username:e.target.value});
@@ -65,6 +74,7 @@ const Login = ()=>{
    const onChangePassword=(e)=>{
       setValues({...allValues, password:e.target.value});
    }
+
 
 
     useEffect(()=>{
@@ -94,16 +104,23 @@ const Login = ()=>{
          We'll never share your Username with anyone else.
          </small>
       </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Password</label>
+      <div className="form-group"   >
+           <label htmlFor="exampleInputPassword1">Password</label>
         <input
-         type="password"
+          type={showPassword ? "text" : "password"}
          className="form-control"
            id="exampleInputPassword1"
            onChange={onChangePassword}
            />
+              
+            < i
+             className={`fa-solid ${showPassword ? "fa-eye-slash":"fa-eye"} toggle-password`}
+             onClick={() => setShowPassword(!showPassword)}>
+               
+              </i>
+            
       </div>
-      
+             
       <button type="submit" className="btn btn-success form-control  mb-3">
          Submit
          </button>
@@ -113,13 +130,14 @@ const Login = ()=>{
 
 
     </div>
-
+    
+             
    );
 
 
-
+            
 
 };
 
-
+             
 export default Login;

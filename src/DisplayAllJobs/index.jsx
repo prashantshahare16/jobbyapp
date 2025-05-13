@@ -2,6 +2,7 @@ import './index.css';
 import { FaBriefcase,FaStar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+
  
 const DisplayAllJobs=(props)=>{
 
@@ -15,7 +16,7 @@ const {id,title,rating,company_logo_url,location,job_description,employment_type
                <img src ={company_logo_url} style={{width:"70px"}}/>
 
             <div className="title-rating-cont">
-               <h3>{title}</h3>
+               <h5>{title}</h5>
                <FaStar style={{color:"gold",marginRight:"5px"}}/>
                <span>{rating}</span>
                

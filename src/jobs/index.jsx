@@ -143,7 +143,7 @@ import React, { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
 import Header from "../header";
-import DisplayAllJobs from "../displayAllJobs";
+import DisplayAllJobs from "../DisplayAllJobs/index.jsx";
 import FilterSection from "../filterSection";
 import "./index.css";
 

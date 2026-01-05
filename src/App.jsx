@@ -1,7 +1,7 @@
 
 import { Route, Routes } from "react-router-dom";
 import Home from "./home"; 
-import Login from "./Login"; 
+import Login from "./login"; 
 import Jobs from "./Jobs";
 import NotFound from "./notFound";
 import ProtectedRoute from "./protectedRoute";

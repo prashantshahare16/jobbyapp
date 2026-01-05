@@ -5,7 +5,7 @@ import Login from "./login";
 import Jobs from "./jobs";
 import NotFound from "./notFound";
 import ProtectedRoute from "./protectedRoute";
-import JobsItemDetails from "./jobsItemDetails";
+import JobsItemDetails from "./JobsItemDetails";
 
 
 
